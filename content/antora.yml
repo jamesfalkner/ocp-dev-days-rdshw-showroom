@@ -1,5 +1,5 @@
 name: modules
-title: OpenShift Developer Days
+title: OpenShift Dev Day
 version: ~
 nav:
   - modules/ROOT/nav.adoc

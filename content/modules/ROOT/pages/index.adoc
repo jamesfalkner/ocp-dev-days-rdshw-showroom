@@ -1,6 +1,6 @@
-= OpenShift Developer Days
+= OpenShift Dev Day
 
-Welcome to OpenShift Developer Days -- a hands-on workshop where you experience the full developer journey on Red Hat OpenShift.
+Welcome to OpenShift Dev Day -- a hands-on workshop where you experience the full developer journey on Red Hat OpenShift.
 
 == What you'll learn
 

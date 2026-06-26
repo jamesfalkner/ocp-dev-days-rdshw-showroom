@@ -1,10 +1,10 @@
-= Showroom Template
+= OpenShift Dev Day
 
-A template for creating Red Hat Showroom lab guides and demo content, built with https://antora.org[Antora].
+Showroom lab guide for the **OpenShift Dev Day** workshop -- a 90-minute hands-on experience where attendees play the role of a new developer at Parasol Insurance and ship a feature from code to production without filing a single ticket.
 
-* 0% cruft
-* Red Hat Demo Platform UI Bundle default
-* Dev Mode extension that displays the asciidoc attributes you have to work with
+This workshop is part of the https://www.redhat.com/en/events/red-hat-openshift-roadshows[Red Hat OpenShift Roadshows] series, which delivers in-person and virtual hands-on events worldwide. Each roadshow covers different aspects of the OpenShift platform; this one focuses on the cohesive developer experience across Developer Hub, Dev Spaces, Pipelines, GitOps, and AI-assisted coding.
+
+Built with https://antora.org[Antora] and the Red Hat Demo Platform Showroom framework.
 
 == Documentation
 

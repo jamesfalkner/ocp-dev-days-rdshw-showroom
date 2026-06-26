@@ -1,4 +1,4 @@
-// Shared attributes for OpenShift Developer Days
+// Shared attributes for OpenShift Dev Day
 // These map to Showroom runtime variables from RHDP provisioning
 
 // Environment URLs
