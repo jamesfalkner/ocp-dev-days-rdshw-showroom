@@ -26,8 +26,19 @@ Your first stop is Red Hat Developer Hub -- Parasol's internal developer portal.
 . Open **Red Hat Developer Hub** at {rhdh_url}[{rhdh_url}^]
 
 . Log in with your credentials:
-* Username: `{user}`
-* Password: `{password}`
++
+--
+Username:
+[source,role="copypaste"]
+----
+{user}
+----
+Password:
+[source,role="copypaste"]
+----
+{password}
+----
+--
 +
 image::rhdh-login.png[Red Hat Developer Hub login page,link=self,window=blank,width=700]
 
@@ -149,8 +160,18 @@ image::rhdh-template-results.png[Development environment provisioned with one cl
 +
 You may be prompted to log in to GitLab. Use the same credentials:
 +
-* Username: `{user}`
-* Password: `{password}`
+--
+Username:
+[source,role="copypaste"]
+----
+{user}
+----
+Password:
+[source,role="copypaste"]
+----
+{password}
+----
+--
 +
 Take a look at the repository -- this is the branch where your changes will live until you merge them.
 
@@ -179,15 +200,16 @@ Alternatively, you can open Dev Spaces directly at {devspaces_url}[{devspaces_ur
 
 .. **Authorize access to OpenShift** -- click **Allow selected permissions**
 .. **Do you trust the authors of this repository?** -- click **Continue**
-.. **GitLab login** -- log in with your credentials if needed (`{user}` / `{password}`)
-.. **GitLab Authorization** -- click **Authorize** to give DevSpaces permission to open your branch (if you wait too long here (20s or more), you may need to click **Retry** to try again after giving permission)
+.. **GitLab login** -- log in with your credentials if needed (username: `{user}`, password: `{password}`)
+.. **GitLab Authorization** -- click **Authorize** to give DevSpaces permission to open your branch (if you wait too long here, you may need to click **Retry** to try again after giving permission)
+
+. Once the workspace loads, take a moment to explore:
 .. **Trust the workspace files** -- click **Yes, I trust the authors**
 .. **Trust publishers and install** -- click to install the recommended extensions including the AI coding assistant
 .. Dismiss any popups about MicroProfile or Dependency Analytics by clicking the **X**
 +
 WARNING: If you miss the "trust the authors" prompt, Dev Spaces opens in Restricted Mode and you will see a highlighted banner at the bottom of the window. Click the banner to confirm trust so extensions load properly.
-
-. Once the workspace loads, take a moment to explore:
++
 * The file explorer shows the complete project structure
 * The terminal has CLI tools pre-installed (`oc`, `mvn`, etc.)
 * Extensions for Java, Quarkus, YAML, and the AI coding assistant are already configured
@@ -209,9 +231,9 @@ Before writing new code, start the application to see what you are working with.
 
 . Wait for the application to start. When Dev Spaces shows a popup notification to open the application, click to **Open In New Tab**.
 +
-TIP: If you miss the popup, open the application from the *ENDPOINTS* panel in the lower left of the Dev Spaces window. Find *quarkus-dev (8080/https)* and click the arrow icon.
-+
 image::devspaces-workspace-popup.png[Quarkus popup,link=self,window=blank,width=700]
++
+TIP: If you miss the popup, open the application from the *ENDPOINTS* panel in the lower left of the Dev Spaces window. Find *quarkus-dev (8080/https)* and click the arrow icon.
 
 . Browse the running Parasol Insurance application:
 * This is a claims and customer management platform used by Parasol's agents
@@ -346,13 +368,26 @@ image::scm-commit.png[Developer commits and pushes code from the IDE,link=self,w
 
 === Exercise 2: Watch the pipeline in Developer Hub
 
-. Switch back to **Developer Hub** in your browser.
+. Switch back to **Developer Hub** in your browser. You may need to log in again if your session has expired:
++
+--
+Username:
+[source,role="copypaste"]
+----
+{user}
+----
+Password:
+[source,role="copypaste"]
+----
+{password}
+----
+--
 
 . Navigate to your component in the catalog.
 
 . Click the **CI** tab to see the pipeline run that was triggered by your push. (you can ignore any failed GitLab pipelines shown - we are using OpenShift pipelines in this exercise)
 +
-+ Click to expand the pipeline run to see the that the pipeline runs several stages:
+. Click to expand the pipeline run to see the that the pipeline runs several stages:
 +
 * **Clone** -- source code pulled from the Git repository
 * **SonarQube SAST** -- static analysis and code quality scanning
@@ -501,7 +536,12 @@ public class ClaimsStatsResource {
 
 . Commit and push the fix using the **Source Control** view:
 * Stage the modified `ClaimsStatsResource.java`
-* Commit message: `Fix code smells: use proper logging and remove empty catch block`
+* Commit message:
++
+[source,role="copypaste"]
+----
+Fix code smells: use proper logging and remove empty catch block
+----
 * Click the dropdown arrow next to **Commit** and select **Commit & Push**
 
 === Exercise 2: Verify the pipeline passes
