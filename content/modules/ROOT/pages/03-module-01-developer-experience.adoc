@@ -441,7 +441,7 @@ The platform engineering team has preconfigured a security team-approved agentic
 === Exercise 1: Fix the code with AI assistance
 
 Let's use the AI assistant to resolve the SonarQube violations.
-+
+
 NOTE: We're using the link:https://www.zoocode.dev/[Zoo Code] open-source AI coding assistant. We've configured it to work with a large language model (LLM) we're hosting to facilitate this workshop.
 
 . Switch back to **Dev Spaces**.
@@ -537,6 +537,8 @@ public class ClaimsStatsResource {
     }
 }
 ----
+
+. Before committing -- you don't push untested code, right? -- switch to the browser tab where the Parasol application is still running and press kbd:[Ctrl+R] (or kbd:[Cmd+R] on Mac) to reload. Quarkus dev mode has already picked up the changes, so you should see the same JSON response at `/api/claims/stats` as before. If you closed that tab, click the **Explorer** icon in the left sidebar, then find the *ENDPOINTS* panel at the bottom and click *quarkus-dev (8080/https)* to reopen it. If the endpoint returns an error, check the Dev Spaces terminal and adjust the code before continuing.
 
 . Commit and push the fix using the **Source Control** view:
 * Stage the modified `ClaimsStatsResource.java`
